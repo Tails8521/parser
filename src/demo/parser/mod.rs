@@ -92,6 +92,7 @@ impl<A: MessageHandler> DemoParser<A> {
     }
 }
 
+#[derive(Clone)]
 pub struct RawPacketStream {
     stream: Stream,
     ended: bool,
@@ -124,6 +125,7 @@ impl RawPacketStream {
     }
 }
 
+#[derive(Clone)]
 pub struct DemoTicker<A: MessageHandler> {
     handler: DemoHandler<A>,
     packets: RawPacketStream,

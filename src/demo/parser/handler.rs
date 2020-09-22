@@ -24,6 +24,7 @@ pub trait BorrowMessageHandler: MessageHandler {
     fn borrow_output(&self, state: &ParserState) -> &Self::Output;
 }
 
+#[derive(Clone)]
 pub struct DemoHandler<T: MessageHandler> {
     pub tick: u32,
     string_table_names: Vec<String>,
